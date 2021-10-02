@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+
 const schedule = {
   title: "CS Courses for 2021-2022",
   courses: {
@@ -56,13 +57,12 @@ const Course = ( { course } ) => (
 </div>
 );
 
+
 const CourseList = ({ courses }) => (
   <div className="course-list">
-    { Object.values(courses).map(course => <Course key = { course.id } course = { course }/>) }
+  { Object.values(courses).map(course => <Course key={course.id} course={ course } />) }
   </div>
-  
 );
-
 
 const App = () =>  (
   <div className="container">
