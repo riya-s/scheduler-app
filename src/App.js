@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
+import CourseList from './components/CourseList';
 import { addScheduleTimes } from './utilities/time.js';
-import CourseList from './components/CourseList'
 import { useData } from './utilities/firebase.js';
 
 const Banner = ({ title }) => (
-  <h1>{title}</h1>
+  <h1>{ title }</h1>
 );
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
       <Banner title={ schedule.title } />
       <CourseList courses={ schedule.courses } />
     </div>
-  );
+  );  
 };
 
 export default App;
